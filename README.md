@@ -1,10 +1,10 @@
-# Muiswerk React Tutorial
+# Muiswerk React Tutorial #
 
 ## Introduction
 
 > An introduction or lead on what problem you're solving. Answer the question, "Why does someone need this?"
 
-## Installation
+## Installation ##
 
 > To get this project up and running you will need a couple of node modules:
  * react 
@@ -22,13 +22,14 @@
 (instead of)<br /> 
 `$ npm install --save <module_name>`
 
-## Syntax & Highlighting
+## Syntax & Highlighting ##
 
 
-## Resources
+## Resources ##
 
-React     | https://facebook.github.io/react/tutorial/tutorial.html
-Redux     | http://redux.js.org/
-Router    | https://reacttraining.com/react-router/web/guides/philosophy
-Bootstrap | https://react-bootstrap.github.io/
-
+| Topic | Source |
+| --- | --- |
+| React | https://facebook.github.io/react/tutorial/tutorial.html |
+| Redux | http://redux.js.org/ |
+| Router | https://reacttraining.com/react-router/web/guides/philosophy | 
+| Bootstrap | https://react-bootstrap.github.io/ |
