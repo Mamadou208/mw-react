@@ -24,13 +24,13 @@
   ...
 
 
-4. Tutorials used:
-  React
-    https://facebook.github.io/react/tutorial/tutorial.html
-  Redux
-    http://redux.js.org/
+4. Tutorials used:  <br>
+  React<br>
+    https://facebook.github.io/react/tutorial/tutorial.html<br>
+  Redux<br>
+    http://redux.js.org/<br>
   Router
-    https://reacttraining.com/react-router/web/guides/philosophy
-  Bootstrap
-    https://react-bootstrap.github.io/
+    https://reacttraining.com/react-router/web/guides/philosophy<br>
+  Bootstrap<br>
+    https://react-bootstrap.github.io/<br>
 
