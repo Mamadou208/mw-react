@@ -9,18 +9,18 @@ class HeadlinesContainer extends Component {
 }
 
 function mapStateToProps(state) {
-	const { selectedSubreddit, postsBySubreddit } = state
+	const { selectedTopic, postsByTopic } = state
 	const {
 		isFetching,
 		lastUpdated,
 		items: posts
-	} = postsBySubreddit[selectedSubreddit] || {
+	} = postsByTopic[selectedTopic] || {
 		isFetching: true,
 		items: []
 	}
 
 	return {
-		selectedSubreddit,
+		selectedTopic,
 		posts,
 		isFetching,
 		lastUpdated

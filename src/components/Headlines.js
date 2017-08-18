@@ -2,16 +2,16 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
 import {
-	selectSubreddit,
+	selectTopic,
 	fetchPostsIfNeeded,
-	invalidateSubreddit
+	invalidateTopic
 } from '../actions'
 import Posts from './Posts'
 
 import { Glyphicon } from 'react-bootstrap'
 
 const propTypes = {
-	selectedSubreddit: PropTypes.string.isRequired,
+	selectedTopic: PropTypes.string.isRequired,
 	posts: PropTypes.array.isRequired,
 	isFetching: PropTypes.bool.isRequired,
 	lastUpdated: PropTypes.number,
@@ -23,9 +23,13 @@ class Headlines extends Component {
 		super(props)
 
 		if(this.props.match.url !== '/'){
-			this.handleChange(this.props.match.url)
+			// this.handleChange(this.props.match.url)
+			console.log("T1")
+			console.log(this.props.match)
+			this.handleChange('nosnieuwsalgemeen')
+
 		} else {
-			this.handleChange('/all')
+			this.handleChange('nosnieuwsalgemeen')
 		}
 
 		this.handleChange = this.handleChange.bind(this)
@@ -33,30 +37,30 @@ class Headlines extends Component {
 	}
 
 	componentDidMount() {
-		const { dispatch, selectedSubreddit } = this.props
-		dispatch(fetchPostsIfNeeded(selectedSubreddit))
+		const { dispatch, selectedTopic } = this.props
+		dispatch(fetchPostsIfNeeded(selectedTopic))
 	}
 
 	componentDidUpdate(prevProps) {
-		if (this.props.selectedSubreddit !== prevProps.selectedSubreddit) {
-			const { dispatch, selectedSubreddit } = this.props
-			dispatch(fetchPostsIfNeeded(selectedSubreddit))
+		if (this.props.selectedTopic !== prevProps.selectedTopic) {
+			const { dispatch, selectedTopic } = this.props
+			dispatch(fetchPostsIfNeeded(selectedTopic))
 		}
 	}
 
-	handleChange(nextSubreddit) {
-		const { dispatch, selectedSubreddit } = this.props
-		dispatch(selectSubreddit(nextSubreddit))
-		dispatch(invalidateSubreddit(selectedSubreddit))
-		dispatch(fetchPostsIfNeeded(nextSubreddit))
+	handleChange(nextTopic) {
+		const { dispatch, selectedTopic } = this.props
+		// dispatch(selectTopic(nextTopic))
+		dispatch(invalidateTopic(selectedTopic))
+		dispatch(fetchPostsIfNeeded(nextTopic))
 	}
 
 	handleRefreshClick(e) {
 		e.preventDefault()
 
-		const { dispatch, selectedSubreddit } = this.props
-		dispatch(invalidateSubreddit(selectedSubreddit))
-		dispatch(fetchPostsIfNeeded(selectedSubreddit))
+		const { dispatch, selectedTopic } = this.props
+		dispatch(invalidateTopic(selectedTopic))
+		dispatch(fetchPostsIfNeeded(selectedTopic))
 	}
 
 	render () {

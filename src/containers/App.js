@@ -21,16 +21,16 @@ const App = () => {
 					<Row className="show-grid">
 						<Col sm={3}>
 							<ul>
-								<li><Link to="/">Home</Link></li>
-								<li><Link to="/reactjs">Reactjs</Link></li>
-								<li><Link to="/programming">Programming</Link></li>
+								<li><Link to="/">Algemeen</Link></li>
+								<li><Link to="/nosnieuwstech">Tech</Link></li>
+								<li><Link to="/nosnieuwseconomie">Economie</Link></li>
 							</ul>
 						</Col>
 						<Col sm={6}>
-							{tabsInstance}
+
 							<Route exact path="/" component={HeadlinesContainer}/>
-							<Route path="/reactjs" component={HeadlinesContainer}/>
-							<Route path="/programming" component={HeadlinesContainer}/>
+							<Route path="/nosnieuwstech" component={HeadlinesContainer}/>
+							<Route path="/nosnieuwseconomie" component={HeadlinesContainer}/>
 						</Col>
 					</Row>
 				</Grid>
@@ -38,13 +38,13 @@ const App = () => {
 		</Router>
 	)
 }
-
-const tabsInstance = (
-	<Tabs defaultActiveKey={1} id="uncontrolled-tab-example" onSelect={this.handleSelect}>
-		<Tab eventKey={1} title="Tab 1"><Redirect to="/" /></Tab>
-		<Tab eventKey={2} title="Tab 2"><Redirect to="/reactjs" /></Tab>
-		<Tab eventKey={3} title="Tab 3"><Redirect to="/programming" /></Tab>
-	</Tabs>
-)
+							// {tabsInstance}
+// const tabsInstance = (
+// 	<Tabs defaultActiveKey={1} id="uncontrolled-tab-example" onSelect={this.handleSelect}>
+// 		<Tab eventKey={1} title="Tab 1"><Redirect to="/" /></Tab>
+// 		<Tab eventKey={2} title="Tab 2"><Redirect to="/nosnieuwstech" /></Tab>
+// 		<Tab eventKey={3} title="Tab 3"><Redirect to="/nosnieuwseconomie" /></Tab>
+// 	</Tabs>
+// )
 
 export default App
