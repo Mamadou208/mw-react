@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 
 import { Col, Grid, Row, Button, ButtonGroup } from 'react-bootstrap'
-import { Nav, Navbar, NavItem } from 'react-bootstrap'
+import { Nav, Navbar, NavItem, Well } from 'react-bootstrap'
 
 import HeadlinesContainer from '../containers/HeadlinesContainer'
 
@@ -17,17 +17,21 @@ const App = () => {
 				<Grid fluid>
 					<Row className="show-grid">
 						{navbarInstance}
-						<Col sm={3}>
+						<Col sm={2} smOffset={1}>
 							<ButtonGroup vertical block>
 								<RedButton loc='/' type="primary" title="Algemeen"/>
 								<RedButton loc='/nosnieuwstech' type="primary" title="Tech"/>
 								<RedButton loc='/nosnieuwseconomie' type="primary" title="Economie"/>
 							</ButtonGroup>
 						</Col>
-						<Col sm={6}>
+						<Col sm={5}>
 							<Route exact path="/" component={HeadlinesContainer}/>
 							<Route path="/nosnieuwstech" component={HeadlinesContainer} />
 							<Route path="/nosnieuwseconomie" component={HeadlinesContainer}/>
+						</Col>
+						<Col sm={3}>
+							<h1>Preview</h1>
+							<Well>Over here!</Well>
 						</Col>
 					</Row>
 				</Grid>

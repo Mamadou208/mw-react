@@ -29,9 +29,10 @@ function requestPosts(topic) {
 function receivePosts(topic, json) {
   let validatedPosts
   if (json.status === 'error') {
+    console.log(json.message)
     // validatedPosts = json.message
   } else {
-    validatedPosts = json.items.map(child => child.title)
+    validatedPosts = json.items
   }
 
   return {

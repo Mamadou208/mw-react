@@ -27,20 +27,7 @@ class Headlines extends Component {
 		this.handleChange = this.handleChange.bind(this)
 		this.handleRefreshClick = this.handleRefreshClick.bind(this)
 	}
-
-	//Ok for some reason no errors when this code is moved to componentWillMount
-	//Will not yet trigger re-render
-	//So I think it's better in ther particular case. 
-	// constructor(props) {
-	// 	super(props)
-	// 	// const { url } = this.props.match
-	// 	// let topic = (this.props.match.url !== '/') ? this.props.match.url.replace(/^\/+/g, '') : 'nosnieuwsalgemeen'
-	// 	// this.handleChange(topic)
-
-	// 	// this.handleChange = this.handleChange.bind(this)
-	// 	// this.handleRefreshClick = this.handleRefreshClick.bind(this)
-	// }
-
+	
 	componentDidMount() {
 		const { dispatch, selectedTopic } = this.props
 		dispatch(fetchPostsIfNeeded(selectedTopic))

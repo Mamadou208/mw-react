@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import Message from './Message'
+
 export default class Posts extends Component {
   render() {
+  	console.log(this.props.posts)
     return (
-      <ul>
-        {this.props.posts.map((item, i) => <li key={i}>{item}</li>)}
-      </ul>
+      <div>
+        {this.props.posts.map((item, i) => <Message key={i} item={item} />)}
+      </div>
     )
   }
 }
