@@ -6,7 +6,7 @@
     react-bootstrap
     react-dom
     react-redux
-    react-router-dom      
+    react-router-dom
     react-scripts
     redux
     redux-logger
@@ -16,12 +16,14 @@
 
   The server can then be started by running: npm start. 
 
+2. Syntax & Highlighting
 
-2. How to use: 
+  
+3. How to use: 
   ...
 
 
-3. Tutorials used:
+4. Tutorials used:
   React
     https://facebook.github.io/react/tutorial/tutorial.html
   Redux

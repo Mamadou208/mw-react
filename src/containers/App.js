@@ -9,23 +9,31 @@ import {
 	Redirect
 } from 'react-router-dom'
 
-import { Tab, Tabs } from 'react-bootstrap'
+import { Tab, Tabs, Col, Grid, Row } from 'react-bootstrap'
 
 import HeadlinesContainer from '../containers/HeadlinesContainer'
 
 const App = () => {
 	return (
 		<Router>
-			<div>
-				{tabsInstance}
-				<ul>
-					<li><Link to="/">Home</Link></li>
-					<li><Link to="/reactjs">Reactjs</Link></li>
-					<li><Link to="/programming">Programming</Link></li>
-				</ul>
-				<Route exact path="/" component={HeadlinesContainer}/>
-				<Route path="/reactjs" component={HeadlinesContainer}/>
-				<Route path="/programming" component={HeadlinesContainer}/>
+			 <div >
+				<Grid fluid>
+					<Row className="show-grid">
+						<Col sm={3}>
+							<ul>
+								<li><Link to="/">Home</Link></li>
+								<li><Link to="/reactjs">Reactjs</Link></li>
+								<li><Link to="/programming">Programming</Link></li>
+							</ul>
+						</Col>
+						<Col sm={6}>
+							{tabsInstance}
+							<Route exact path="/" component={HeadlinesContainer}/>
+							<Route path="/reactjs" component={HeadlinesContainer}/>
+							<Route path="/programming" component={HeadlinesContainer}/>
+						</Col>
+					</Row>
+				</Grid>
 			</div>
 		</Router>
 	)
@@ -38,11 +46,5 @@ const tabsInstance = (
 		<Tab eventKey={3} title="Tab 3"><Redirect to="/programming" /></Tab>
 	</Tabs>
 )
-
-//<ul>
-//	<li><Link to="/">Home</Link></li>
-//	<li><Link to="/reactjs">Reactjs</Link></li>
-//	<li><Link to="/programming">Programming</Link></li>
-//</ul>
 
 export default App
