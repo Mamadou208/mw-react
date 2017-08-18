@@ -26,6 +26,7 @@
 
 
 ## Resources
+
 React     | https://facebook.github.io/react/tutorial/tutorial.html
 Redux     | http://redux.js.org/
 Router    | https://reacttraining.com/react-router/web/guides/philosophy
