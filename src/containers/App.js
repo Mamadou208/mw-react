@@ -64,15 +64,4 @@ const navbarInstance = (
   </Navbar>
 );
 
-
-
-							// {tabsInstance}
-// const tabsInstance = (
-// 	<Tabs defaultActiveKey={1} id="uncontrolled-tab-example" onSelect={this.handleSelect}>
-// 		<Tab eventKey={1} title="Tab 1"><Redirect to="/" /></Tab>
-// 		<Tab eventKey={2} title="Tab 2"><Redirect to="/nosnieuwstech" /></Tab>
-// 		<Tab eventKey={3} title="Tab 3"><Redirect to="/nosnieuwseconomie" /></Tab>
-// 	</Tabs>
-// )
-
 export default App
