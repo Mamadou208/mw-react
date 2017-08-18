@@ -21,7 +21,7 @@ const propTypes = {
 class Headlines extends Component {
 	componentWillMount() {
 		const { url } = this.props.match
-		let topic = (this.props.match.url !== '/') ? this.props.match.url.replace(/^\/+/g, '') : 'nosnieuwsalgemeen'
+		let topic = (url !== '/') ? url.replace(/^\/+/g, '') : 'nosnieuwsalgemeen'
 		this.handleChange(topic)
 
 		this.handleChange = this.handleChange.bind(this)
@@ -31,15 +31,15 @@ class Headlines extends Component {
 	//Ok for some reason no errors when this code is moved to componentWillMount
 	//Will not yet trigger re-render
 	//So I think it's better in ther particular case. 
-	constructor(props) {
-		super(props)
-		// const { url } = this.props.match
-		// let topic = (this.props.match.url !== '/') ? this.props.match.url.replace(/^\/+/g, '') : 'nosnieuwsalgemeen'
-		// this.handleChange(topic)
+	// constructor(props) {
+	// 	super(props)
+	// 	// const { url } = this.props.match
+	// 	// let topic = (this.props.match.url !== '/') ? this.props.match.url.replace(/^\/+/g, '') : 'nosnieuwsalgemeen'
+	// 	// this.handleChange(topic)
 
-		// this.handleChange = this.handleChange.bind(this)
-		// this.handleRefreshClick = this.handleRefreshClick.bind(this)
-	}
+	// 	// this.handleChange = this.handleChange.bind(this)
+	// 	// this.handleRefreshClick = this.handleRefreshClick.bind(this)
+	// }
 
 	componentDidMount() {
 		const { dispatch, selectedTopic } = this.props
@@ -72,6 +72,8 @@ class Headlines extends Component {
 		const { posts, isFetching, lastUpdated } = this.props
 		return (
 			<div>
+				<h1>Title</h1>
+				<hr />
 				<p>
 					{lastUpdated &&
 					<span>Last updated at {new Date(lastUpdated).toLocaleTimeString()}.</span>}

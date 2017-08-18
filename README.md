@@ -7,6 +7,7 @@
     react-dom
     react-redux
     react-router-dom
+    history
     react-scripts
     redux
     redux-logger
