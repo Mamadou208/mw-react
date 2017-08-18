@@ -19,21 +19,26 @@ const propTypes = {
 }
 
 class Headlines extends Component {
-	constructor(props) {
-		super(props)
-
-		if(this.props.match.url !== '/'){
-			// this.handleChange(this.props.match.url)
-			console.log("T1")
-			console.log(this.props.match)
-			this.handleChange('nosnieuwsalgemeen')
-
-		} else {
-			this.handleChange('nosnieuwsalgemeen')
-		}
+	componentWillMount() {
+		const { url } = this.props.match
+		let topic = (this.props.match.url !== '/') ? this.props.match.url.replace(/^\/+/g, '') : 'nosnieuwsalgemeen'
+		this.handleChange(topic)
 
 		this.handleChange = this.handleChange.bind(this)
 		this.handleRefreshClick = this.handleRefreshClick.bind(this)
+	}
+
+	//Ok for some reason no errors when this code is moved to componentWillMount
+	//Will not yet trigger re-render
+	//So I think it's better in ther particular case. 
+	constructor(props) {
+		super(props)
+		// const { url } = this.props.match
+		// let topic = (this.props.match.url !== '/') ? this.props.match.url.replace(/^\/+/g, '') : 'nosnieuwsalgemeen'
+		// this.handleChange(topic)
+
+		// this.handleChange = this.handleChange.bind(this)
+		// this.handleRefreshClick = this.handleRefreshClick.bind(this)
 	}
 
 	componentDidMount() {
@@ -50,7 +55,7 @@ class Headlines extends Component {
 
 	handleChange(nextTopic) {
 		const { dispatch, selectedTopic } = this.props
-		// dispatch(selectTopic(nextTopic))
+		dispatch(selectTopic(nextTopic))
 		dispatch(invalidateTopic(selectedTopic))
 		dispatch(fetchPostsIfNeeded(nextTopic))
 	}
@@ -71,7 +76,7 @@ class Headlines extends Component {
 					{lastUpdated &&
 					<span>Last updated at {new Date(lastUpdated).toLocaleTimeString()}.</span>}
 					{!isFetching &&
-					<a href="" onClick={this.handleRefreshClick}> <Glyphicon glyph="refresh" />Refresh</a>}
+					<a href="" onClick={this.handleRefreshClick}> <br /><Glyphicon glyph="refresh" /> Refresh</a>}
 				</p>
 
 				{isFetching && posts.length === 0 && <h2>Loading...</h2>}

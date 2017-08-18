@@ -27,10 +27,17 @@ function requestPosts(topic) {
 }
 
 function receivePosts(topic, json) {
+  let validatedPosts
+  if (json.status === 'error') {
+    // validatedPosts = json.message
+  } else {
+    validatedPosts = json.items.map(child => child.title)
+  }
+
   return {
     type: RECEIVE_POSTS,
     topic,
-    posts: json.items.map(child => child.title),
+    posts: validatedPosts,
     receivedAt: Date.now()
   }
 }
@@ -38,7 +45,7 @@ function receivePosts(topic, json) {
 function fetchPosts(topic) {
   return dispatch => {
     dispatch(requestPosts(topic))
-    return fetch (`https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Ffeeds.nos.nl%2F${topic}`)
+    return fetch (`https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Ffeeds.nos.nl%2F${topic}&api_key=zxh5boucub20iepe20193vdm37u06le5iw6zb6p0`)
       .then(response => response.json())
       .then(json => dispatch(receivePosts(topic, json)))
   }

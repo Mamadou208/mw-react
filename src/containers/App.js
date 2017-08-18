@@ -5,11 +5,10 @@ import React from 'react'
 import {
 	BrowserRouter as Router,
 	Route,
-	Link,
-	Redirect
+	Link
 } from 'react-router-dom'
 
-import { Tab, Tabs, Col, Grid, Row } from 'react-bootstrap'
+import { Col, Grid, Row, Button, ButtonGroup } from 'react-bootstrap'
 
 import HeadlinesContainer from '../containers/HeadlinesContainer'
 
@@ -20,14 +19,14 @@ const App = () => {
 				<Grid fluid>
 					<Row className="show-grid">
 						<Col sm={3}>
-							<ul>
-								<li><Link to="/">Algemeen</Link></li>
-								<li><Link to="/nosnieuwstech">Tech</Link></li>
-								<li><Link to="/nosnieuwseconomie">Economie</Link></li>
-							</ul>
+							<ButtonGroup vertical block>
+								<Link to="/" className="btn btn-primary">Algemeen</Link>
+								<Link to="/nosnieuwstech" className="btn btn-primary">Tech</Link>
+								<Link to="/nosnieuwseconomie" className="btn btn-primary">Economie</Link>
+							</ButtonGroup>
 						</Col>
 						<Col sm={6}>
-
+							<h1>Title</h1>
 							<Route exact path="/" component={HeadlinesContainer}/>
 							<Route path="/nosnieuwstech" component={HeadlinesContainer}/>
 							<Route path="/nosnieuwseconomie" component={HeadlinesContainer}/>
