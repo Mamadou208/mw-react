@@ -1,10 +1,7 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
+import React from 'react'
 import { Well } from 'react-bootstrap'
 
 const Message = ({ i, item }) => {
-	console.log(item)
 	return(
 		<Well bsSize="small" key={i}>
 			<b>{item.title}</b><br/>

@@ -56,10 +56,10 @@ class Headlines extends Component {
 	}
 
 	render () {
-		const { posts, isFetching, lastUpdated } = this.props
+		const { posts, isFetching, lastUpdated, selectedTopic } = this.props
 		return (
 			<div>
-				<h1>Title</h1>
+				<h2>{selectedTopic}</h2>
 				<hr />
 				<p>
 					{lastUpdated &&

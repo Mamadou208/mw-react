@@ -4,6 +4,14 @@ export const REQUEST_POSTS = 'REQUEST_POSTS'
 export const RECEIVE_POSTS = 'RECEIVE_POSTS'
 export const SELECT_TOPIC = 'SELECT_TOPIC'
 export const INVALIDATE_TOPIC = 'INVALIDATE_TOPIC'
+// export const HIGHLIGHT_LINE = 'HIGHLIGHT_LINE'
+
+// export function highlightLine(line) {
+//   return {
+//     type: HIGHLIGHT_LINE,
+//     line
+//   }
+// }
 
 export function selectTopic(topic) {
   return {

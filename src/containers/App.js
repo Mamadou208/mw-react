@@ -1,12 +1,11 @@
 import React from 'react'
 import {
 	BrowserRouter,
-	Route,
-	Link
+	Route
 } from 'react-router-dom'
 
 import { Col, Grid, Row, Button, ButtonGroup } from 'react-bootstrap'
-import { Nav, Navbar, NavItem, Well } from 'react-bootstrap'
+import { Nav, Navbar, Well } from 'react-bootstrap'
 
 import HeadlinesContainer from '../containers/HeadlinesContainer'
 
@@ -30,8 +29,9 @@ const App = () => {
 							<Route path="/nosnieuwseconomie" component={HeadlinesContainer}/>
 						</Col>
 						<Col sm={3}>
-							<h1>Preview</h1>
+							<h2>Preview</h2>
 							<Well>Over here!</Well>
+
 						</Col>
 					</Row>
 				</Grid>
@@ -42,8 +42,9 @@ const App = () => {
 
 const RedButton = (args) => {
 	return(
-		<Route render={({ history }) => (
+		<Route render={({ history, location }) => (
 			<Button
+			className={location.pathname === args.loc ? 'active' : ''}
 			bsStyle={args.type}
 			onClick={() => { history.push(args.loc) }}>
 			{args.title}
