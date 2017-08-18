@@ -1,0 +1,49 @@
+{
+	"currentQuestionId": 0,
+	"exObj": [
+		{	
+			"exType": "mk",
+			"context": "Some contextual text",
+			"qPhrase": "Dit is een vraag?",
+			"ansSet": [
+				{
+					"option": "Option one",
+					"isCorrect": false,  
+					"feedback": "fout"
+				},
+				{
+					"option": "Option two",
+					"isCorrect": false,  
+					"feedback": "fout"
+				},
+				{
+					"option": "Option three",
+					"isCorrect": true,  
+					"feedback": "goed"
+				}
+			]
+		},
+		{
+			"exType": "mk",
+			"context": "",
+			"qPhrase": "Dit is een vraag?2",
+			"ansSet": [
+				{
+					"option": "Option one2",
+					"isCorrect": false,  
+					"feedback": "fout"
+				},
+				{
+					"option": "Option two2",
+					"isCorrect": false,  
+					"feedback": "fout"
+				},
+				{
+					"option": "Option three2",
+					"isCorrect": true,  
+					"feedback": "goed"
+				}
+			]
+		}
+	]
+}
