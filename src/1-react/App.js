@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import ExternalComponent from './External'
 import './app.css'
 
+import PropsExample from './Props'
+
 /**
  * Example structure of a React Component. 
  */
@@ -16,6 +18,8 @@ class App extends Component {
 		return (
 			<div>
 				<h1>Hello World!</h1>
+				<PropsExample />
+				<hr />
 				<MyClass />
 				<MyElement />
 				<AnotherNotation />

@@ -6,6 +6,8 @@ Tutorial React, Redux and Routing for Muiswerk.
 
 ## Installation ##
 
+To work out your own solution I suggest creating your own branch. 
+
 To get this project up and running you will need a couple of node modules:
  * react 
  * prop-types 
@@ -22,6 +24,7 @@ These modules are all defined in the package.json file. And will all be download
 
 ## Syntax & Highlighting ##
 
+This project uses Tabs instead of spaces. It is advised to use Tab Size 2. 
  * http://babeljs.io/docs/editors <br />
  * https://blog.jetbrains.com/webstorm/2015/05/ecmascript-6-in-webstorm-transpiling/
 
