@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import ExternalComponent from './External'
+import './app.css'
 
 /**
  * Example structure of a React Component. 
@@ -17,15 +19,25 @@ class App extends Component {
 				<MyClass />
 				<MyElement />
 				<AnotherNotation />
+				<ExternalComponent />
 			</div>
 		)
 	}
 }
 
 class MyClass extends Component {
+	myFunction () {
+		return (
+			<p>MyFunction</p>
+		)
+	}
+
 	render () {
 		return (
-			<p>MyClass Instance</p>
+			<div>
+				<p>MyClass Instance</p>
+				{this.myFunction()}
+			</div>
 		)
 	} 
 }

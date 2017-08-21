@@ -1,0 +1,20 @@
+
+1.1 Components
+	In 'index.js' in the src folder 
+
+
+
+	Keep in mind that elements returned should always be single elements, e.g.
+	return ( 	// Does NOT compile
+		<p>MyClass Instance</p>
+		<p>MyClass Instance</p>
+	)
+
+	return ( 	// Does compile
+		<div>
+			<p>MyClass Instance</p>
+			<p>MyClass Instance</p>
+		</div>
+	)
+
+
