@@ -4,7 +4,7 @@ import './app.css'
 
 /**
  * Example structure of a React Component. 
- */
+ */ 
 class App extends Component {
 
 	/**
