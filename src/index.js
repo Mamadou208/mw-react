@@ -7,7 +7,7 @@ import './lib/bootstrap/css/bootstrap-flat.css'
 
 
 //Step 1 React
-import App from './1-react/App-solution'
+import App from './1-React/Template'
 ReactDOM.render(
 	<App />, 
 	document.getElementById('root'));

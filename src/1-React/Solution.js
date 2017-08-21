@@ -46,7 +46,7 @@ class App extends Component {
 				<Button bsStyle="primary" onClick={() => this.newPerson()}> Add Person </Button>
 				<Button bsStyle="primary" onClick={() => this.removeLast()}> Remove </Button>
 				<Button bsStyle="primary" onClick={() => this.undo()}> Undo </Button>
-				<h1>List of people</h1>
+				<h1>The List</h1>
 				<People people={people} />
 			</div>
 		)
