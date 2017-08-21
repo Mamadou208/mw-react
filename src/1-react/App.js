@@ -39,7 +39,7 @@ class MyClass extends Component {
 				{this.myFunction()}
 			</div>
 		)
-	} 
+	}
 }
 
 const MyElement = () => {

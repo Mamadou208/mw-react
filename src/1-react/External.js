@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class ExternalComponent extends Component {
 	render () {
 		return (
-			<p>ExternalComponent Instance</p>
+			<p>ExternalComponent Instance </p>
 		)
 	}
 }
