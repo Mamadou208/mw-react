@@ -2,7 +2,7 @@
 
 ## Introduction ##
 
-Tutorial React, Redux and Routing for Muiswerk. 
+Tutorial React, Redux and Routing for Muiswerk. Each step folder contains a file with instructions. 
 
 ## Installation ##
 

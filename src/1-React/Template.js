@@ -21,7 +21,6 @@ class App extends Component {
 		console.log("Not yet implemented. ")
 	}
 
-
 	render () {
 		return (
 			<div>

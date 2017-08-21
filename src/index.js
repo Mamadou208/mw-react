@@ -6,8 +6,8 @@ import './index.css'
 import './lib/bootstrap/css/bootstrap-flat.css'
 
 
-//Step 1 React
-import App from './1-React/Template'
+//Step 1-React
+import App from './1-React/App'
 ReactDOM.render(
 	<App />, 
 	document.getElementById('root'));

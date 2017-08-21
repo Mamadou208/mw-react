@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button, Table } from 'react-bootstrap'
 
 class PropsExample extends Component {
 	constructor () {
@@ -9,10 +10,17 @@ class PropsExample extends Component {
 		}
 	}
 
+	changeText() {
+		this.setState({
+			content: "Now it's changed!",
+		}) 
+	}
+
 	render () {
 		return  (
 			<div>
 				<p>Props Example</p>
+				<Button bsStyle="primary" onClick={() => this.changeText()}> Change </Button>
 				<MyComponent content="Some text from props" />
 				{this.state.content}
 				<MyComponent content={this.state.content} />
@@ -28,6 +36,29 @@ class MyComponent extends Component {
 			<p>{this.props.content}</p>
 		)
 	}
+}
+
+const NumberLine = ({x}) => {
+	let prev = x-1
+	let next = x+1
+	return (
+		<Table>
+			<thead>
+				<tr>
+					<th>Previous</th>
+					<th>Current</th>
+					<th>Next</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{prev}</td>
+					<td>{x}</td>
+					<td>{next}</td>
+				</tr>
+			</tbody>
+		</Table>
+	)
 }
 
 export default PropsExample

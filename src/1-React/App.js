@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import ExternalComponent from './External'
 import './app.css'
 
-import PropsExample from './Props'
-
 /**
  * Example structure of a React Component. 
  */ 
@@ -15,20 +13,32 @@ class App extends Component {
 	 * or another composite component that you've defined yourself.
 	 */
 	render () {
+		/**
+		 * Components can be used as custom HTML tags. 
+		 *
+		 * ExternalComponent is only rendered when show is true. 
+		 * Unrendered external files are not loaded into the browser until required.
+		 * Therefore codesplitting improves performance 
+		 */
+		let show = true 
 		return (
 			<div>
 				<h1>Hello World!</h1>
-				<PropsExample />
 				<hr />
 				<MyClass />
 				<MyElement />
 				<AnotherNotation />
-				<ExternalComponent />
+				{ show && 
+				<ExternalComponent />}
 			</div>
 		)
 	}
 }
 
+/**
+ * Another example, this Component is used as follows: 
+ * <Myclass />
+ */ 
 class MyClass extends Component {
 	myFunction () {
 		return (
