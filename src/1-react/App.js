@@ -6,7 +6,7 @@ import PropsExample from './Props'
 
 /**
  * Example structure of a React Component. 
- */
+ */ 
 class App extends Component {
 
 	/**
