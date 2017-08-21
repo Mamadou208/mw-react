@@ -24,7 +24,7 @@ These modules are all defined in the package.json file. And will all be download
 
 ## Syntax & Highlighting ##
 
-This project uses Tabs instead of spaces. It is advised to use Tab Size 2. 
+This project uses Tabs instead of spaces. It is advised to use Tab Size 2. Also JSX requires some extra syntacic sugar. Babel provides plugins for both Sublime and Jetbrains (PhpStorm/Webstorm) enviroments.
  * http://babeljs.io/docs/editors <br />
  * https://blog.jetbrains.com/webstorm/2015/05/ecmascript-6-in-webstorm-transpiling/
 
