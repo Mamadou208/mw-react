@@ -1,12 +1,12 @@
 # Muiswerk React Tutorial #
 
-## Introduction
+## Introduction ##
 
-> An introduction or lead on what problem you're solving. Answer the question, "Why does someone need this?"
+
 
 ## Installation ##
 
-> To get this project up and running you will need a couple of node modules:
+To get this project up and running you will need a couple of node modules:
  * react 
  * prop-types 
  * react-dom 
@@ -18,12 +18,12 @@
  * redux-logger
  * redux-thunk
 
-> These modules are all defined in the package.json file. And will all be downloaded and installed by running  `npm install` <br /> 
-(instead of)<br /> 
-`$ npm install --save <module_name>`
+These modules are all defined in the package.json file. And will all be downloaded and installed by running  `npm install` without arguments, instead of: `$ npm install --save <module_name>`
 
 ## Syntax & Highlighting ##
 
+ * http://babeljs.io/docs/editors <br />
+ * https://blog.jetbrains.com/webstorm/2015/05/ecmascript-6-in-webstorm-transpiling/
 
 ## Resources ##
 
